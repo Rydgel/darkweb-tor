@@ -14,7 +14,8 @@ import {
   Appear,
   Image,
   CodePane,
-  Text
+  Text,
+  Link
 } from "spectacle";
 
 // Import image preloader util
@@ -30,15 +31,20 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logo: require("../assets/cryptoparty.svg"),
-  torLogo: require("../assets/tor.svg")
+  torLogo: require("../assets/tor.svg"),
+  reseauTor: require("../assets/ReseauTOR2.svg"),
+  routageOignon: require("../assets/routage.png"),
+  torBrowser: require("../assets/torBrowser.svg"),
+  torBrowserHome: require("../assets/tor_browser_home.png")
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#454C72",   // purple
+  primary: "#454C72",   // blueshi
   secondary: "#FEF6E2", // yellowish
   tertiary: "#28B58F",  // green
+  purple: "#7D4299",
   quartenary: "#FF7900"
 }, {
   primary: "Montserrat",
@@ -68,7 +74,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="secondary" textColor="primary">
-          <Heading textAlign="left" margin="0 0 100px 0" textColor="primary" size={3}>
+          <Heading textAlign="left" margin="0 0 80px 0" textColor="primary" size={3}>
             whoami(1)
           </Heading>
           <CodePane lang="bash" source={sourceCodeWhoAmI} textSize="33px" bgColor="primary"/>
@@ -78,21 +84,47 @@ export default class Presentation extends React.Component {
           <Image src={images.torLogo.replace("/", "")} height="500px" />
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>TOR</Heading>
+          <List margin="100px 0">
+            <ListItem><u>T</u>he <u>O</u>nion <u>R</u>outer</ListItem>
+            <ListItem>Anonymat de la source</ListItem>
+            <ListItem>Contourne la censure</ListItem>
+            <ListItem>Logiciel open-source</ListItem>
+          </List>
+          <Heading textColor="secondary" size={6}>
+            <Link href="http://TorProject.org" textColor="secondary">TorProject.org</Link>
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="secondary">
+          <Heading textColor="purple" size={3}>Principe de fonctionnement</Heading>
+          <Image bgColor="secondary" src={images.reseauTor.replace("/", "")} height="500px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="secondary">
+          <Heading textColor="purple" size={3}>Routage oignon</Heading>
+          <Image margin="100px 0" bgColor="secondary" src={images.routageOignon.replace("/", "")} height="250px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <Image margin="100px 0 100px 100px" bgColor="purple" src={images.torBrowser.replace("/", "")} height="400px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <List margin="100px 0">
+            <ListItem>Accessibilité</ListItem>
+            <ListItem>Accès au réseau TOR facile</ListItem>
+            <ListItem>Basé sur Mozilla Firefox</ListItem>
+            <ListItem>Privilégie les connexions sécurisées</ListItem>
           </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <Image bgColor="purple" src={images.torBrowserHome.replace("/", "")} height="700px" />
         </Slide>
 
       </Deck>
