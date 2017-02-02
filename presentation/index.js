@@ -31,11 +31,14 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logo: require("../assets/cryptoparty.svg"),
+  darkWebRatio: require("../assets/darkWebRatio.png"),
   torLogo: require("../assets/tor.svg"),
   reseauTor: require("../assets/ReseauTOR2.svg"),
   routageOignon: require("../assets/routage.png"),
   torBrowser: require("../assets/torBrowser.svg"),
-  torBrowserHome: require("../assets/tor_browser_home.png")
+  torBrowserHome: require("../assets/tor_browser_home.png"),
+  torBrowser2: require("../assets/torBrowser2.png"),
+  torCircuit: require("../assets/circuit.png")
 };
 
 preloader(images);
@@ -63,6 +66,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={300} theme={theme} progress="bar">
+
         <Slide transition={["zoom"]} bgColor="primary">
           <Image src={images.logo.replace("/", "")} margin="0px auto 40px" height="293px" />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
@@ -80,6 +84,19 @@ export default class Presentation extends React.Component {
           <CodePane lang="bash" source={sourceCodeWhoAmI} textSize="33px" bgColor="primary"/>
         </Slide>
 
+        <Slide transition={["zoom", "slide"]} bgColor="primary" textColor="secondary">
+          <Heading margin="0 0 80px 0" textColor="secondary" size={3}>
+            Deepweb ?
+          </Heading>
+          <Text textColor="secondary" lineHeight="1.8">
+            Tout ce qui n'est pas visible par les moteurs de recherches
+          </Text>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="primary" textColor="secondary">
+          <Image src={images.darkWebRatio.replace("/", "")} height="600px" />
+        </Slide>
+
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
           <Image src={images.torLogo.replace("/", "")} height="500px" />
         </Slide>
@@ -95,6 +112,14 @@ export default class Presentation extends React.Component {
           <Heading textColor="secondary" size={6}>
             <Link href="http://TorProject.org" textColor="secondary">TorProject.org</Link>
           </Heading>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>TOR</Heading>
+          <Text textColor="secondary">
+            Todo example of use (whistleblowers, wikileaks, China firewall)<br />
+            journalists, activists
+          </Text>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
@@ -123,8 +148,27 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
-          <Heading textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Navigateur TOR</Heading>
           <Image bgColor="purple" src={images.torBrowserHome.replace("/", "")} height="700px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <Image bgColor="purple" src={images.torBrowser2.replace("/", "")} height="600px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Navigateur TOR</Heading>
+          <Image bgColor="purple" src={images.torCircuit.replace("/", "")} height="500px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>.onions urls</Heading>
+          <List>
+            <ListItem>Code de 16 caractères</ListItem>
+            <ListItem>Remplace URLs traditionnelles</ListItem>
+            <ListItem>Ex: zqktlwi4fecvo6ri.onion</ListItem>
+          </List>
         </Slide>
 
       </Deck>
