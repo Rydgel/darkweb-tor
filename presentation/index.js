@@ -199,7 +199,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
           <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Wikileaks</Heading>
-          <Image bgColor="purple" src={images.wikileaks2.replace("/", "")} height="600px" />
+          <Image bgColor="purple" src={images.wikileaks2.replace("/", "")} height="550px" />
         </Slide>
 
       </Deck>
