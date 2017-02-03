@@ -38,7 +38,10 @@ const images = {
   torBrowser: require("../assets/torBrowser.svg"),
   torBrowserHome: require("../assets/tor_browser_home.png"),
   torBrowser2: require("../assets/torBrowser2.png"),
-  torCircuit: require("../assets/circuit.png")
+  torCircuit: require("../assets/circuit.png"),
+  wikileaks1: require("../assets/wikileaks1.png"),
+  wikileaks2: require("../assets/wikileaks2.png"),
+  doll: require("../assets/doll.jpg")
 };
 
 preloader(images);
@@ -70,10 +73,10 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]} bgColor="primary">
           <Image src={images.logo.replace("/", "")} margin="0px auto 40px" height="293px" />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            <span style={{ opacity: .5 }}>{"{"}</span>Deep/Dark<span style={{ opacity: .5 }}>{"}"}</span>web &amp; le réseau TOR
+            <span style={{ opacity: .5 }}>{"{"}</span>Deep/Dark<span style={{ opacity: .5 }}>{"}"}</span> Web &amp; le réseau TOR
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={3} bold>
-            Le Darkweb, ami ou ennemi ?
+            Le Dark Web, ami ou ennemi ?
           </Text>
         </Slide>
 
@@ -97,6 +100,17 @@ export default class Presentation extends React.Component {
           <Image src={images.darkWebRatio.replace("/", "")} height="600px" />
         </Slide>
 
+        <Slide transition={["zoom", "slide"]} bgColor="primary" textColor="secondary">
+          <Heading margin="0 0 80px 0" textColor="secondary" size={3}>
+            Dark Web
+          </Heading>
+          <List margin="100px 0">
+            <ListItem>Petite partie du Deep Web</ListItem>
+            <ListItem>Nécessite logiciels pour y accéder</ListItem>
+            <ListItem>Ex: TOR, Freenet, I2P</ListItem>
+          </List>
+        </Slide>
+
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
           <Image src={images.torLogo.replace("/", "")} height="500px" />
         </Slide>
@@ -106,7 +120,7 @@ export default class Presentation extends React.Component {
           <List margin="100px 0">
             <ListItem><u>T</u>he <u>O</u>nion <u>R</u>outer</ListItem>
             <ListItem>Anonymat de la source</ListItem>
-            <ListItem>Contourne la censure</ListItem>
+            <ListItem>Contourne la cyber-censure</ListItem>
             <ListItem>Logiciel open-source</ListItem>
           </List>
           <Heading textColor="secondary" size={6}>
@@ -116,10 +130,12 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
           <Heading textColor="secondary" size={3}>TOR</Heading>
-          <Text textColor="secondary">
-            Todo example of use (whistleblowers, wikileaks, China firewall)<br />
-            journalists, activists
-          </Text>
+          <List margin="100px 0" textColor="secondary">
+            <ListItem>Soutien au Printemps arabe de 2011</ListItem>
+            <ListItem>Wikileaks</ListItem>
+            <ListItem>Journalisme</ListItem>
+            <ListItem>Outre-passer le pare-feu chinois</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
@@ -130,6 +146,11 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
           <Heading textColor="purple" size={3}>Routage oignon</Heading>
           <Image margin="100px 0" bgColor="secondary" src={images.routageOignon.replace("/", "")} height="250px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="secondary">
+          <Heading textColor="purple" size={3}>Routage oignon</Heading>
+          <Image margin="100px 0" bgColor="secondary" src={images.doll.replace("/", "")} height="250px" />
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
@@ -167,8 +188,18 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>Code de 16 caractères</ListItem>
             <ListItem>Remplace URLs traditionnelles</ListItem>
-            <ListItem>Ex: zqktlwi4fecvo6ri.onion</ListItem>
+            <ListItem>Ex: wlupld3ptjvsgwqw.onion</ListItem>
           </List>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Wikileaks</Heading>
+          <Image bgColor="purple" src={images.wikileaks1.replace("/", "")} height="420px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Wikileaks</Heading>
+          <Image bgColor="purple" src={images.wikileaks2.replace("/", "")} height="600px" />
         </Slide>
 
       </Deck>
