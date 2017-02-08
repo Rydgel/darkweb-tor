@@ -3,15 +3,11 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
-  Appear,
   Image,
   CodePane,
   Text,
@@ -41,7 +37,8 @@ const images = {
   torCircuit: require("../assets/circuit.png"),
   wikileaks1: require("../assets/wikileaks1.png"),
   wikileaks2: require("../assets/wikileaks2.png"),
-  doll: require("../assets/doll.jpg")
+  doll: require("../assets/doll.jpg"),
+  tails: require("../assets/tails-sticker.svg")
 };
 
 preloader(images);
@@ -97,7 +94,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary" textColor="secondary">
-          <Image src={images.darkWebRatio.replace("/", "")} height="600px" />
+          <Image src={images.darkWebRatio.replace("/", "")} height="650px" />
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary" textColor="secondary">
@@ -129,12 +126,22 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading textColor="secondary" size={3}>Qui utilise TOR ?</Heading>
+          <List margin="100px 0" textColor="secondary">
+            <ListItem textSize="2rem">Les gens voulant protéger leur vie privée</ListItem>
+            <ListItem textSize="2rem">Journalistes</ListItem>
+            <ListItem textSize="2rem">Activistes</ListItem>
+            <ListItem textSize="2rem">Armées / Polices</ListItem>
+            <ListItem textSize="2rem">…</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
           <Heading textColor="secondary" size={3}>TOR</Heading>
           <List margin="100px 0" textColor="secondary">
-            <ListItem>Soutien au Printemps arabe de 2011</ListItem>
             <ListItem>Wikileaks</ListItem>
-            <ListItem>Journalisme</ListItem>
             <ListItem>Outre-passer le pare-feu chinois</ListItem>
+            <ListItem>Soutien au Printemps arabe de 2011</ListItem>
           </List>
         </Slide>
 
@@ -150,7 +157,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom", "slide"]} bgColor="secondary">
           <Heading textColor="purple" size={3}>Routage oignon</Heading>
-          <Image margin="100px 0" bgColor="secondary" src={images.doll.replace("/", "")} height="250px" />
+          <Image margin="100px 0" bgColor="secondary" src={images.doll.replace("/", "")} height="350px" />
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
@@ -188,8 +195,15 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>Code de 16 caractères</ListItem>
             <ListItem>Remplace URLs traditionnelles</ListItem>
+            <ListItem>Sécurité ++ : on reste dans le TOR</ListItem>
+            <ListItem>C'est un Service caché</ListItem>
             <ListItem>Ex: wlupld3ptjvsgwqw.onion</ListItem>
           </List>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 100px 0" textColor="secondary" size={3}>Wikileaks</Heading>
+          <Text margin="0 0 50px 0" textColor="secondary" size={3}>wlupld3ptjvsgwqw.onion</Text>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="purple">
@@ -200,6 +214,31 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom", "slide"]} bgColor="purple">
           <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Wikileaks</Heading>
           <Image bgColor="purple" src={images.wikileaks2.replace("/", "")} height="550px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 0 0" textColor="secondary" size={3}>Tails</Heading>
+          <Image bgColor="purple" src={images.tails.replace("/", "")} height="550px" />
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Tails</Heading>
+            <List>
+              <ListItem textSize="36px">Système d'exploitation basé sur GNU/Linux</ListItem>
+              <ListItem textSize="36px">Utilisé en live-system</ListItem>
+              <ListItem textSize="36px">Outils d'anonymisation</ListItem>
+              <ListItem textSize="36px">TOR, emails, clef usb cryptés…</ListItem>
+              <ListItem textSize="36px">Ex: utilisation dans un cyber-café</ListItem>
+            </List>
+        </Slide>
+
+        <Slide transition={["zoom", "slide"]} bgColor="purple">
+          <Heading margin="0 0 30px 0" textColor="secondary" size={3}>Conclusion</Heading>
+          <Heading margin="0 0 50px 0" textColor="secondary" size={4}>Darkweb, ami ou ennemi ?</Heading>
+          <Text textColor="secondary" lineHeight="1.5">
+            Nous pouvons nous approprier les outils qui propulsent le Darkweb à des fins de contrôle de notre vie
+            privée et de sécurité.
+          </Text>
         </Slide>
 
       </Deck>
