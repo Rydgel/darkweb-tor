@@ -89,7 +89,7 @@ export default class Presentation extends React.Component {
             Deepweb ?
           </Heading>
           <Text textColor="secondary" lineHeight="1.8">
-            Tout ce qui n'est pas visible par les moteurs de recherches
+            Tout ce qui n’est pas visible par les moteurs de recherches
           </Text>
         </Slide>
 
@@ -196,7 +196,7 @@ export default class Presentation extends React.Component {
             <ListItem>Code de 16 caractères</ListItem>
             <ListItem>Remplace URLs traditionnelles</ListItem>
             <ListItem>Sécurité ++ : on reste dans le TOR</ListItem>
-            <ListItem>C'est un Service caché</ListItem>
+            <ListItem>C’est un Service caché</ListItem>
             <ListItem>Ex: wlupld3ptjvsgwqw.onion</ListItem>
           </List>
         </Slide>
@@ -224,9 +224,9 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom", "slide"]} bgColor="purple">
           <Heading margin="0 0 50px 0" textColor="secondary" size={3}>Tails</Heading>
             <List>
-              <ListItem textSize="36px">Système d'exploitation basé sur GNU/Linux</ListItem>
+              <ListItem textSize="36px">Système d’exploitation basé sur GNU/Linux</ListItem>
               <ListItem textSize="36px">Utilisé en live-system</ListItem>
-              <ListItem textSize="36px">Outils d'anonymisation</ListItem>
+              <ListItem textSize="36px">Outils d’anonymisation</ListItem>
               <ListItem textSize="36px">TOR, emails, clef usb cryptés…</ListItem>
               <ListItem textSize="36px">Ex: utilisation dans un cyber-café</ListItem>
             </List>
